@@ -1,0 +1,12 @@
+name = "well-known"
+main = "src/worker.js"
+compatibility_date = "2024-01-18"
+workers_dev = true
+
+[[routes]]
+pattern = "arl.sh/.well-known/*"
+zone_name = "arl.sh"
+
+[[routes]]
+pattern = "garnier.dev/.well-known/*"
+zone_name = "garnier.dev"

@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/au2001
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://garnier.dev
+  * I am au2001 (https://keybase.io/au2001) on keybase.
+  * I have a public key with fingerprint 7F4C A1F6 A14E 19F9 F443  417D FC86 1140 B0AB B010
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010141b8f458b89a22bd3ab4526edd34fe9ef10bb9fc7253ddd5506aff7ef70ff3740a",
+      "fingerprint": "7f4ca1f6a14e19f9f443417dfc861140b0abb010",
+      "host": "keybase.io",
+      "key_id": "fc861140b0abb010",
+      "kid": "010141b8f458b89a22bd3ab4526edd34fe9ef10bb9fc7253ddd5506aff7ef70ff3740a",
+      "uid": "f23642c7ab15c523c38db6185132fc19",
+      "username": "au2001"
+    },
+    "service": {
+      "hostname": "garnier.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1659794656,
+  "expire_in": 157680000,
+  "prev": "c0c1e4284b65567315165fd635fb05593f8b4fbd4a8beb50f97a022f85ccfd8d",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMIiAnicrVJtaE5RHH+ezduWB0XGasXVPrAX99x7zn2jyMuUb8ssIo9z7jlnu9s8
+99l97oatFTZGm7exohRaLE+JWMtLxFiZmQ/GGAuJSWKS8gU5d+abj86X0/n/f2//
+f+duJDWUHh7pfPHreUvTxXDv7aNVIfLZf10rEZdul6xaqZyNXqyCsoQfLXeoZEky
+kAEExOAQGcQwsaIQqmICkaIxSlXImck4kAkxua0rSKWUIiRrmHOdcV3mXNWhjKVc
+iTuxEubFPSfmC1mdQxsDrmEAGTC5ySFUIdAptw0NACgTGRMivAWx1E0EDBGO4ATL
+d1xRE4/oaLx/4P9z7qo/PoqqQcXWMQHIRopqqwYlGjAQUBVuAzMAJpgXw1uYQOMq
+RZaBVJcriVq1Y7NgrcEcY/0S7MUc5uVTVi2Icc/1XdutEI1S348nrIDob48HyK2M
+RMc0osSJUbFEwahmXsJxY5IFBNL2nUAUaMjUTaghLVdi2+KOx6JOgEC6ZsjiBD7C
+zpJs2QYMKgYkGkKargIkqJxqKuJERshUuUEgJxRigzCCZG7qWFYUbiDb5tSgUjBV
+ZcyVLFPExCVCMuGUxLBf5TGpruvWxnGhcHpowviU4HOF0tOm/f1y7uVJoRtvI1ay
+Y/+B2m1O3uS8PTk3P5VljYus29EaqUnL6T4xtL6o8+mVs00Ze4qKE7kFTYtvPzmf
+H9nyZu6l/aGX15rfp3bPIM/OWZlLrlVmWaDl0LI1ePZI+5ePR9sGs+/sW/UojIcG
+GxYV9Lcd/JDxNWOHNVBKvjboRcXfpvdkX+1t3X16U8HyiqWkv3jvhsLzm3PIysap
+w49bTj1brXdcmTi/+fCCgeMb1ya/15Qmp95deXDnFN7Tuncg44fS0Vn5vDEHbQLJ
+3pmFXfX6/e6ee3V9le3D11M/Z2KgHEnr23WmK6+vOaV7Tte7hyvohZOvMsPHGgaG
+G5Nl+2p+Plg4LztzZ/2s+t/XkkOn
+=3c1J
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/au2001
+
+==================================================================

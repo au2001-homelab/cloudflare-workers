@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/au2001
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://arl.sh
+  * I am au2001 (https://keybase.io/au2001) on keybase.
+  * I have a public key with fingerprint 7F4C A1F6 A14E 19F9 F443  417D FC86 1140 B0AB B010
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010141b8f458b89a22bd3ab4526edd34fe9ef10bb9fc7253ddd5506aff7ef70ff3740a",
+      "fingerprint": "7f4ca1f6a14e19f9f443417dfc861140b0abb010",
+      "host": "keybase.io",
+      "key_id": "fc861140b0abb010",
+      "kid": "010141b8f458b89a22bd3ab4526edd34fe9ef10bb9fc7253ddd5506aff7ef70ff3740a",
+      "uid": "f23642c7ab15c523c38db6185132fc19",
+      "username": "au2001"
+    },
+    "merkle_root": {
+      "ctime": 1705600882,
+      "hash_meta": "df61f0c885c9b09f5cf3264d1595f5ec0425e19bc40783ef37db85f4000edabd",
+      "seqno": 25372155
+    },
+    "revoke": {
+      "sig_ids": [
+        "552e4520d265e3b0add44f63c4a9f3140840e5c1f6c77cdae2429e41bf3e0e890f"
+      ]
+    },
+    "service": {
+      "hostname": "arl.sh",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1705600937,
+  "expire_in": 157680000,
+  "prev": "36f169d863b71b7b9158fe1e07bf53237767c8e10483e8a751e642636e556e9e",
+  "seqno": 29,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMK6AnicrZNdaB1FFMdvGts0QVHQIkWu0aViIWmc2ZnZ2b2RtipqsVRTaAVr5Tof
+Z3KX3Oze7O7NBzFRwe8qiVIKUtBQXxpoUAxNrVYt1SBYRfDBtilq6kP9AElqX5SK
+cTZaUPDRp2WH//+c//mdmY+vaiy0NCzMnP1j7pU9bzWcPBHXCzDZPTnsyFgPOaVh
+pweWP1DVkGblnlA7JQdhhCmWvqHMl34gXFdqIiRlrgdaE2ogAIORlIFR3GVEa80Y
+8oQxHAxHxhBOkXDaHRNG3ZDUkjDKbFluqBLYeAJTwIEJDKWEYq6N8j2MKZJISGl7
+W2MlTnOHDSdFCh1hbM/sT3k53n/o/+fc9b/6uMSjruJCYqaYSxTxtfSwzzBxjcJB
+LkwhiUQvWLWouwhhZ6Td6YWkpwrlJI6zHK3KwlyAOWIeQr7v2vFEWin3QiasTxsP
+G6R8n6lAosAwZYjrUY1ZwAwDhajLLC6pKOI+AZtRS58ZihACLaS2KVLoi2KnZCfi
+LmbMRkigP+6BvHsadltqqVN62GHMBcsCaddjQCw9rSk1HlFUBIZYoD5FwJTdkOJc
+aQEudQOwQA0BBH6AjPPISN4t6Q/VcvF8TZfHT6odacWGqSVxFqu4as8qWVZLSzmS
+bKiWiwZAlv+2l2UYaXs9rKMfkjSMI4vIKv9NKyC83YHBWphAOcwVjHu+nRzlfaDf
+liSewV6gfY9IjiWXAWa+AQyIS8OISzj3uPIBI2rh+YIzDHapHvGAMc/eh3/gC2xO
+0W1rWmaRyOoJOCMnju++otDQUli1ckX+bgotzddcfk3vF5qWhl5tfbuybvLBx9o2
+vbbl5vf6brj7xoP1zV9NbCh2RfGx58emxu5qe6NzzYWWO1SyumnzwJsXd89df89z
+4dUXDoebPp87ON63/Yuja53Rx6eOnB7emazd0bGrfuWXxVn+QPGFvb/v/fW++Y2D
+n06ebjbff7b/6EuNl8Ym5tD8E7cttV43MXCyc6H43XTx1vWHSmf3fLt6V2vXuWNT
+g7WvF8/3/PLzDxe7zn/Utl9sG43e+enO/jX7Pvzx2ksrKpWNwfqZIxX6zZn7q0Ot
+W2fubWuOnllXbZw99dDSJ+NN2cutxSdHn46On3p2y/yZpQ8WDpxbta/3pqVbdvy2
+OLt4+8rOF7cdeH3D9kNPTde2To+LR9/9E1BVgjg=
+=XvuG
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/au2001
+
+==================================================================
