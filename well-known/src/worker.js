@@ -4,9 +4,18 @@ async function fetch(request) {
   const { hostname, pathname } = new URL(request.url);
 
   if (pathname.startsWith("/.well-known/") && hostname in wellknown) {
-    const key = pathname.substring(13);
-    const file = wellknown[hostname][key];
-    if (file) return new Response(file);
+    const data = wellknown[hostname][pathname.substring(13)];
+    switch (typeof data) {
+      case "string":
+        return new Response(data);
+
+      case "object":
+        return new Response(JSON.stringify(data), {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+    }
   }
 
   return new Response(null, {
