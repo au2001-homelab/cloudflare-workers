@@ -10,3 +10,7 @@ zone_name = "arl.sh"
 [[routes]]
 pattern = "garnier.dev/.well-known/*"
 zone_name = "garnier.dev"
+
+[[routes]]
+pattern = "archon.codesens.us/.well-known/*"
+zone_name = "codesens.us"
