@@ -1,0 +1,14 @@
+name = "cors-proxy"
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+[[routes]]
+pattern = "cors.arl.sh/*"
+zone_name = "arl.sh"
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
