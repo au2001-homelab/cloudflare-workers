@@ -51,13 +51,26 @@ function indexOf(bytes, needle) {
   return -1;
 }
 
-async function* bytes(reader, rest) {
+async function* bytes(reader, rest, length) {
+  let seen = rest.byteLength;
   if (rest.byteLength) yield rest;
 
   for (;;) {
     const { done, value } = await reader.read();
-    if (value?.byteLength) yield value;
-    if (done) return;
+
+    if (value?.byteLength) {
+      seen += value.byteLength;
+      yield value;
+    }
+
+    if (done) {
+      if (length !== null && seen < length)
+        throw new Error(
+          `Upstream hung up with ${length - seen} of ${length} body bytes unsent`,
+        );
+
+      return;
+    }
   }
 }
 
@@ -78,11 +91,14 @@ async function* dechunk(source) {
     return true;
   }
 
+  const truncated = () =>
+    new Error("Upstream hung up before the end of the chunked body");
+
   for (;;) {
     let at = indexOf(buffer, CRLF);
 
     while (at < 0) {
-      if (!(await more())) return;
+      if (!(await more())) throw truncated();
       at = indexOf(buffer, CRLF);
     }
 
@@ -95,7 +111,7 @@ async function* dechunk(source) {
     if (size === 0) return;
 
     for (let left = size; left > 0;) {
-      while (buffer.byteLength === 0) if (!(await more())) return;
+      while (buffer.byteLength === 0) if (!(await more())) throw truncated();
 
       const take = Math.min(left, buffer.byteLength);
       yield buffer.subarray(0, take);
@@ -103,7 +119,7 @@ async function* dechunk(source) {
       left -= take;
     }
 
-    while (buffer.byteLength < 2) if (!(await more())) return;
+    while (buffer.byteLength < 2) if (!(await more())) throw truncated();
     buffer = buffer.subarray(2);
   }
 }
@@ -129,11 +145,15 @@ function stream(source, socket) {
   });
 }
 
-export async function direct(request, url) {
+export async function direct(request, url, signal) {
   const socket = connect(
     { hostname: url.hostname, port: Number(url.port) || 80 },
     { secureTransport: "off" },
   );
+
+  signal?.addEventListener("abort", () => void socket.close().catch(() => {}), {
+    once: true,
+  });
 
   const body = request.body
     ? new Uint8Array(await request.arrayBuffer())
@@ -210,7 +230,11 @@ export async function direct(request, url) {
     return new Response(null, options);
   }
 
-  const source = bytes(reader, buffer.subarray(at + 4));
+  const counted = chunked ? null : headers.get("content-length");
+  const declared = counted === null ? NaN : Number(counted);
+  const length = Number.isInteger(declared) && declared >= 0 ? declared : null;
+
+  const source = bytes(reader, buffer.subarray(at + 4), length);
   return new Response(
     stream(chunked ? dechunk(source) : source, socket),
     options,

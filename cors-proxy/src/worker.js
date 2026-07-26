@@ -66,7 +66,7 @@ async function proxy(request) {
 
   try {
     response = literal(url.hostname)
-      ? await direct(upstream, url)
+      ? await direct(upstream, url, request.signal)
       : await fetch(upstream, { redirect: "manual" });
   } catch (cause) {
     return error(502, `Could not reach ${url}: ${cause.message}\n`);
