@@ -1,3 +1,5 @@
+import { direct, literal } from "./direct.js";
+
 const USAGE = "Usage: https://cors.arl.sh/<url>\n";
 
 const corsHeaders = {
@@ -50,13 +52,22 @@ async function proxy(request) {
     return error(400, `Unsupported protocol: ${url.protocol}\n\n${USAGE}`);
   }
 
+  if (url.protocol === "https:" && literal(url.hostname)) {
+    return error(
+      400,
+      `Cannot reach ${url.hostname} over HTTPS: direct IP addresses unsupported by the current runtime.\n\n${USAGE}`,
+    );
+  }
+
   const upstream = new Request(url, request);
   upstream.headers.delete("Host");
 
   let response;
 
   try {
-    response = await fetch(upstream, { redirect: "manual" });
+    response = literal(url.hostname)
+      ? await direct(upstream, url)
+      : await fetch(upstream, { redirect: "manual" });
   } catch (cause) {
     return error(502, `Could not reach ${url}: ${cause.message}\n`);
   }
